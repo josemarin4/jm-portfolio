@@ -8,13 +8,22 @@ const HamburguerMenu: FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  const handleClick = (event: MouseEvent<HTMLElement>): void => {
+  const handleClick = (event: React.MouseEvent<HTMLElement>): void => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleClose = (): void => {
     setAnchorEl(null);
   };
+
+  const handleScrollTo = (id: string): void => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      handleClose();
+    }
+  };
+
   return (
     <Box>
       <Box>
@@ -36,11 +45,13 @@ const HamburguerMenu: FC = () => {
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         transformOrigin={{ vertical: "top", horizontal: "right" }}
       >
-        {["About", "Technologies", "Projects", "Contact"].map((item) => (
-          <MenuItem key={item} onClick={handleClose}>
-            {item}
-          </MenuItem>
-        ))}
+        {["Home", "About", "Technologies", "Projects", "Contact"].map(
+          (item) => (
+            <MenuItem key={item} onClick={() => handleScrollTo(item)}>
+              {item}
+            </MenuItem>
+          )
+        )}
       </Menu>
     </Box>
   );
