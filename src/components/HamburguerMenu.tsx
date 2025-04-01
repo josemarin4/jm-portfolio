@@ -45,13 +45,11 @@ const HamburguerMenu: FC = () => {
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         transformOrigin={{ vertical: "top", horizontal: "right" }}
       >
-        {["Home", "About", "Technologies", "Projects", "Contact"].map(
-          (item) => (
-            <MenuItem key={item} onClick={() => handleScrollTo(item)}>
-              {item}
-            </MenuItem>
-          )
-        )}
+        {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+          <MenuItem key={item} onClick={() => handleScrollTo(item)}>
+            {item}
+          </MenuItem>
+        ))}
       </Menu>
     </Box>
   );

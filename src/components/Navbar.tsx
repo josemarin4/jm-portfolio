@@ -65,7 +65,7 @@ const Navbar = () => {
               padding: 0,
             }}
           >
-            {["Home", "About", "Technologies", "Projects"].map((item) => (
+            {["Home", "About", "Skills", "Projects"].map((item) => (
               <Box
                 component="a"
                 href={"#" + item}

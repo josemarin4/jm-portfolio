@@ -10,14 +10,14 @@ const AboutSection = () => {
         display: "flex",
         justifyContent: "center",
         mt: { xs: 10 },
-        mb: 100,
+        mb: 5,
         px: 2,
       }}
     >
       <Box
         sx={{
-          background: "linear-gradient(to right, #f9fafb, #ffffff)",
-          borderRadius: 2,
+          background: "#f9fafb",
+          borderRadius: "20px",
           px: { xs: 3, md: 6 },
           py: { xs: 5, md: 6 },
           width: "100%",
@@ -104,7 +104,6 @@ const AboutSection = () => {
               py: 1.5,
               borderRadius: 2,
               fontSize: "0.95rem",
-              // Make left margin responsive
               marginLeft: { xs: 0, md: 5 },
               textTransform: "none",
               transition: "all 0.3s ease",

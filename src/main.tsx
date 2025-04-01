@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import { Box } from "@mui/material";
 import ParticleBackground from "./components/ParticleBackground";
 import AboutSection from "./components/AboutSection";
+import Skills from "./components/Skills";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
@@ -41,6 +42,7 @@ createRoot(document.getElementById("root")!).render(
         <Hero />
         <ParticleBackground />
         <AboutSection />
+        <Skills />
       </Box>
     </ThemeProvider>
   </StrictMode>

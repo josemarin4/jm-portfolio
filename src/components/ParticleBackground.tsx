@@ -1,4 +1,4 @@
-import { Box, useTheme, useMediaQuery } from "@mui/material";
+import { Box } from "@mui/material";
 import { FC, useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
@@ -7,20 +7,14 @@ const ParticleBackground: FC = () => {
   const particlesInit = useCallback(async (engine: any) => {
     await loadSlim(engine);
   }, []);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  if (isMobile) {
-    return null;
-  }
   return (
     <Box
       sx={{
         width: "100%",
-        height: "250px",
+        height: "100%",
         position: "relative",
         overflow: "hidden",
-        mb: { xs: 12, md: 17 },
         background:
           "linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0))",
       }}

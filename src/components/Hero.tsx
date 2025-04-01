@@ -1,27 +1,46 @@
-import { Box, Typography } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Button,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import { FC } from "react";
 import Typewriter from "typewriter-effect";
 import SocialIcons from "./SocialIcons";
-import { Button } from "@mui/material";
 import DevIcon from "../assets/icons/devIcon.svg";
+import ParticleBackground from "./ParticleBackground";
 
 const Hero: FC = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const hasVerticalSpace = useMediaQuery("(min-height:800px)");
+
   return (
-    <>
+    <Box
+      id="Home"
+      sx={{
+        px: 2,
+        mt: { xs: 12, md: -4 },
+      }}
+    >
       <Box
-        id="Home"
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-between",
           alignItems: "center",
           minHeight: "70vh",
-          px: 2,
           gap: { xs: 4, md: 8 },
-          mt: { xs: 12, md: -4 },
         }}
       >
-        <Box sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}>
+        <Box
+          sx={{
+            flex: 1,
+            textAlign: { xs: "center", md: "left" },
+            mt: { xs: 4, md: 0 },
+          }}
+        >
           <Typography
             variant="h3"
             sx={{
@@ -36,7 +55,6 @@ const Hero: FC = () => {
               Jose Marin
             </Box>
           </Typography>
-
           <Box
             sx={{
               display: "flex",
@@ -75,7 +93,6 @@ const Hero: FC = () => {
               }}
             />
           </Box>
-
           <Box
             sx={{
               display: "flex",
@@ -83,7 +100,7 @@ const Hero: FC = () => {
               alignItems: "center",
               gap: 3,
               mt: { xs: 9, md: 3 },
-              flexWrap: "wrap",
+              flexWrap: "nowrap",
             }}
           >
             <a
@@ -97,37 +114,74 @@ const Hero: FC = () => {
                 color="primary"
                 sx={{
                   fontWeight: "bold",
-                  fontSize: "0.9rem",
-                  paddingX: 2.5,
-                  paddingY: 1.2,
+                  fontSize: isSmallScreen ? "0.8rem" : "0.9rem",
+                  paddingX: isSmallScreen ? 2 : 2.5,
+                  paddingY: isSmallScreen ? 1 : 1.2,
                   borderRadius: 2,
-                  minWidth: 120,
+                  minWidth: isSmallScreen ? 100 : 120,
                   transition: "transform 0.2s ease-in-out",
-                  "&:hover": {
-                    transform: "scale(1.07)",
-                  },
+                  "&:hover": { transform: "scale(1.07)" },
                 }}
               >
-                My Resume
+                {isSmallScreen ? "Resume" : "My Resume"}
               </Button>
             </a>
-            <SocialIcons />
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                transform: isSmallScreen ? "scale(0.8)" : "scale(1)",
+              }}
+            >
+              <SocialIcons />
+            </Box>
           </Box>
         </Box>
-        <Box
-          component="img"
-          src={DevIcon}
-          alt="Dev Icon"
-          sx={{
-            width: { xs: "80%", sm: "60%", md: 400 },
-            height: "auto",
-            maxWidth: "100%",
-            mt: { xs: 10, md: 10 },
-            mb: { xs: 20, md: 0 },
-          }}
-        />
+
+        <Box sx={{ position: "relative" }}>
+          <Box
+            component="img"
+            src={DevIcon}
+            alt="Dev Icon"
+            sx={{
+              width: { xs: "80%", sm: "60%", md: 400 },
+              height: "auto",
+              maxWidth: "100%",
+              mt: { xs: 10, md: 10 },
+              mb: { xs: 2, md: 0 },
+            }}
+          />
+
+          {!hasVerticalSpace && (
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0, // make sure it covers the entire image width
+                width: "100%",
+                height: "100%",
+                zIndex: -1,
+              }}
+            >
+              <ParticleBackground />
+            </Box>
+          )}
+        </Box>
       </Box>
-    </>
+
+      {hasVerticalSpace && (
+        <Box
+          sx={{
+            mt: 4,
+            position: "relative",
+            width: "100%",
+            height: "250px",
+          }}
+        >
+          <ParticleBackground />
+        </Box>
+      )}
+    </Box>
   );
 };
 
