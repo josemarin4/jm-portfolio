@@ -1,6 +1,8 @@
-import { Box, IconButton, Menu, MenuItem } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
+import { FC, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { FC, useState, MouseEvent } from "react";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
 const HamburguerMenu: FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -13,19 +15,19 @@ const HamburguerMenu: FC = () => {
   const handleClose = (): void => {
     setAnchorEl(null);
   };
-
   return (
     <Box>
-      <IconButton
-        onClick={handleClick}
-        edge="start"
-        aria-label="menu"
-        aria-controls={open ? "menu-appbar" : undefined}
-        aria-haspopup="true"
-      >
-        <MenuIcon sx={{ color: "background.paper" }} />
-      </IconButton>
-
+      <Box>
+        <IconButton
+          onClick={handleClick}
+          edge="start"
+          aria-label="menu"
+          aria-controls={open ? "menu-appbar" : undefined}
+          aria-haspopup="true"
+        >
+          <MenuIcon sx={{ color: "background.paper" }} />
+        </IconButton>
+      </Box>
       <Menu
         id="menu-appbar"
         anchorEl={anchorEl}
