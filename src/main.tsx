@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import { Box } from "@mui/material";
 import ParticleBackground from "./components/ParticleBackground";
+import AboutSection from "./components/AboutSection";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
@@ -34,10 +35,12 @@ createRoot(document.getElementById("root")!).render(
           marginX: "auto",
           height: "auto",
           paddingX: { xs: 2, sm: 3 },
+          mt: 7,
         }}
       >
         <Hero />
         <ParticleBackground />
+        <AboutSection />
       </Box>
     </ThemeProvider>
   </StrictMode>
