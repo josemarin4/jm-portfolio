@@ -69,7 +69,7 @@ const ParticleBackground: FC = () => {
                 top: "bounce",
                 bottom: "bounce",
                 left: "bounce",
-                right: "bounce", // 🔥 ensures full bounce effect in all directions
+                right: "bounce",
               },
             },
             opacity: {
