@@ -1,7 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import { FC } from "react";
 import Typewriter from "typewriter-effect";
-
+import SocialIcons from "./SocialIcons";
+import { Button } from "@mui/material";
 const Hero: FC = () => {
   return (
     <Box
@@ -13,7 +14,6 @@ const Hero: FC = () => {
         px: 2,
       }}
     >
-      {/* Title */}
       <Typography
         variant="h2"
         sx={{
@@ -28,7 +28,6 @@ const Hero: FC = () => {
         </Box>
       </Typography>
 
-      {/* Subheading with matching size */}
       <Box
         sx={{
           display: "flex",
@@ -62,6 +61,44 @@ const Hero: FC = () => {
               .start();
           }}
         />
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center", // baseline = default, change this:
+          gap: 3,
+          mt: 3,
+          flexWrap: "wrap",
+        }}
+      >
+        <a
+          href="/JoseMarinResume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
+        >
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{
+              fontWeight: "bold",
+              fontSize: "0.9rem",
+              paddingX: 2.5,
+              paddingY: 1.2,
+              borderRadius: 2,
+              minWidth: 120,
+              transform: "translateY(8px)", // 🔥 tweak here
+              transition: "transform 0.2s ease-in-out",
+              "&:hover": {
+                transform: "scale(1.07) translateY(2px)", // match the hover as well
+              },
+            }}
+          >
+            My Resume
+          </Button>
+        </a>
+
+        <SocialIcons />
       </Box>
     </Box>
   );
