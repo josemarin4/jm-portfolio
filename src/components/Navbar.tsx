@@ -1,16 +1,38 @@
 import { Box } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
 import HamburguerMenu from "./HamburguerMenu";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [selectedOption, setSelectedOption] = useState<string>("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Box
       sx={{
-        backgroundColor: "primary.main",
+        position: "fixed",
+        top: 0,
+        left: 0,
         width: "100%",
+        zIndex: 10,
+        transition: "all 0.3s ease",
+        backgroundColor: scrolled
+          ? `${theme.palette.primary.main}CC` // Blue with ~80% opacity
+          : theme.palette.primary.main,
+        backdropFilter: scrolled ? "blur(8px)" : "none",
+        boxShadow: scrolled ? "0 4px 12px rgba(0,0,0,0.1)" : "none",
       }}
     >
       <Box
@@ -43,12 +65,18 @@ const Navbar = () => {
               padding: 0,
             }}
           >
-            {["About", "Technologies", "Projects"].map((item) => (
+            {["Home", "About", "Technologies", "Projects"].map((item) => (
               <Box
-                component="li"
+                component="a"
+                href={"#" + item}
                 key={item}
+                onClick={() => {
+                  setSelectedOption("#" + item);
+                }}
                 sx={{
-                  color: "common.white",
+                  color:
+                    selectedOption === item ? "secondary.main" : "common.white",
+                  textDecoration: "none",
                   cursor: "pointer",
                   "&:hover": {
                     color: "secondary.main",
