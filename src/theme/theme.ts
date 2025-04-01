@@ -15,21 +15,18 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#4B6EAF",
+      main: "#1e40af", // Blue
     },
     secondary: {
-      main: "#7FDBFF",
+      main: "#f97316", // Orange
     },
     background: {
-      default: "#F7F9FB",
-      paper: "#FFFFFF",
+      default: "#ffffff", // White background
+      paper: "#f9fafb", // Light gray for cards or sections
     },
     text: {
-      primary: "#1A1A1A",
-      secondary: "#5E5E5E",
-    },
-    success: {
-      main: "#A4EB34",
+      primary: "#111827", // Dark gray for main text
+      secondary: "#6b7280", // Muted gray for subtext
     },
   },
 });
