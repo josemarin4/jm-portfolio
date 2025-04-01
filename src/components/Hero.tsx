@@ -9,6 +9,7 @@ const Hero: FC = () => {
   return (
     <>
       <Box
+        id="Home"
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
@@ -121,7 +122,8 @@ const Hero: FC = () => {
             width: { xs: "80%", sm: "60%", md: 400 },
             height: "auto",
             maxWidth: "100%",
-            mt: { xs: 4, md: 0 },
+            mt: { xs: 10, md: 10 },
+            mb: { xs: 20, md: 0 },
           }}
         />
       </Box>

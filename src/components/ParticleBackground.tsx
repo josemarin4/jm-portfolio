@@ -20,6 +20,7 @@ const ParticleBackground: FC = () => {
         height: "250px",
         position: "relative",
         overflow: "hidden",
+        mb: { xs: 12, md: 17 },
         background:
           "linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0))",
       }}
@@ -66,10 +67,7 @@ const ParticleBackground: FC = () => {
               speed: 1.5,
               direction: "none",
               outModes: {
-                top: "bounce",
-                bottom: "bounce",
-                left: "bounce",
-                right: "bounce",
+                default: "bounce",
               },
             },
             opacity: {
