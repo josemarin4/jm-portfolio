@@ -1,22 +1,5 @@
 import { Box, Typography, Grid } from "@mui/material";
 import SkillIcon from "./SkillIcon";
-
-import javaIcon from "../assets/icons/javaIcon.svg";
-import sqlIcon from "../assets/icons/database-sql.svg";
-import jsIcon from "../assets/icons/jsIcon.svg";
-import tsIcon from "../assets/icons/tsIcon.svg";
-import htmlIcon from "../assets/icons/htmlIcon.svg";
-import cssIcon from "../assets/icons/cssIcon.svg";
-
-import springBootIcon from "../assets/icons/springBootIcon.svg";
-import kafkaIcon from "../assets/icons/kafkaIcon.svg";
-import reactIcon from "../assets/icons/rectIcon.svg";
-import materialIcon from "../assets/icons/materialIcon.svg";
-import awsIcon from "../assets/icons/awsIcon.svg";
-import dockerIcon from "../assets/icons/dockerIcon.svg";
-import gitHubIcon from "../assets/icons/gitHubIcon.svg";
-import gitIcon from "../assets/icons/gitIcon.svg";
-
 export interface Icon {
   src: string;
   alt: string;
@@ -25,23 +8,31 @@ export interface Icon {
 
 const Skills = () => {
   const langIcons: Icon[] = [
-    { src: javaIcon, alt: "Java Icon", name: "Java" },
-    { src: sqlIcon, alt: "SQL Icon", name: "SQL" },
-    { src: jsIcon, alt: "JS Icon", name: "JavaScript" },
-    { src: tsIcon, alt: "TS Icon", name: "TypeScript" },
-    { src: htmlIcon, alt: "HTML Icon", name: "HTML" },
-    { src: cssIcon, alt: "CSS Icon", name: "CSS" },
+    { src: "/assets/icons/javaIcon.svg", alt: "Java Icon", name: "Java" },
+    { src: "/assets/icons/database-sql.svg", alt: "SQL Icon", name: "SQL" },
+    { src: "/assets/icons/jsIcon.svg", alt: "JS Icon", name: "JavaScript" },
+    { src: "/assets/icons/tsIcon.svg", alt: "TS Icon", name: "TypeScript" },
+    { src: "/assets/icons/htmlIcon.svg", alt: "HTML Icon", name: "HTML" },
+    { src: "/assets/icons/cssIcon.svg", alt: "CSS Icon", name: "CSS" },
   ];
 
   const techIcons: Icon[] = [
-    { src: springBootIcon, alt: "Spring Boot Icon", name: "Spring Boot" },
-    { src: kafkaIcon, alt: "Kafka Icon", name: "Kafka" },
-    { src: reactIcon, alt: "React Icon", name: "React" },
-    { src: materialIcon, alt: "Material-UI Icon", name: "Material-UI" },
-    { src: awsIcon, alt: "AWS Icon", name: "AWS" },
-    { src: dockerIcon, alt: "Docker Icon", name: "Docker" },
-    { src: gitHubIcon, alt: "GitHub Icon", name: "GitHub" },
-    { src: gitIcon, alt: "Git Icon", name: "Git" },
+    {
+      src: "/assets/icons/springBootIcon.svg",
+      alt: "Spring Boot Icon",
+      name: "Spring Boot",
+    },
+    { src: "/assets/icons/kafkaIcon.svg", alt: "Kafka Icon", name: "Kafka" },
+    { src: "/assets/icons/rectIcon.svg", alt: "React Icon", name: "React" },
+    {
+      src: "/assets/icons/materialIcon.svg",
+      alt: "Material-UI Icon",
+      name: "Material-UI",
+    },
+    { src: "/assets/icons/awsIcon.svg", alt: "AWS Icon", name: "AWS" },
+    { src: "/assets/icons/dockerIcon.svg", alt: "Docker Icon", name: "Docker" },
+    { src: "/assets/icons/gitHubIcon.svg", alt: "GitHub Icon", name: "GitHub" },
+    { src: "/assets/icons/gitIcon.svg", alt: "Git Icon", name: "Git" },
   ];
 
   return (

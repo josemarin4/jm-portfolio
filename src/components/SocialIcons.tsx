@@ -1,18 +1,19 @@
 import { Box } from "@mui/material";
-import GithubIcon from "../assets/icons/github.svg";
-import LinkedinIcon from "../assets/icons/linkedin.svg";
-import GmailIcon from "../assets/icons/gmail.svg";
 
 const socialLinks = [
-  { href: "https://github.com/josemarin4", icon: GithubIcon, alt: "GitHub" },
+  {
+    href: "https://github.com/josemarin4",
+    icon: "/assets/icons/github.svg",
+    alt: "GitHub",
+  },
   {
     href: "https://www.linkedin.com/in/josem-marin/",
-    icon: LinkedinIcon,
+    icon: "../assets/icons/linkedin.svg",
     alt: "LinkedIn",
   },
   {
     href: "mailto:josem.marinhernandez@gmail.com",
-    icon: GmailIcon,
+    icon: "/assets/icons/gmail.svg",
     alt: "Gmail",
   },
 ];

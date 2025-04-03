@@ -8,7 +8,6 @@ import {
 import { FC } from "react";
 import Typewriter from "typewriter-effect";
 import SocialIcons from "./SocialIcons";
-import DevIcon from "../assets/icons/devIcon.svg";
 import ParticleBackground from "./ParticleBackground";
 
 const Hero: FC = () => {
@@ -143,7 +142,7 @@ const Hero: FC = () => {
         <Box sx={{ position: "relative" }}>
           <Box
             component="img"
-            src={DevIcon}
+            src="/assets/icons/devIcon.svg"
             alt="Dev Icon"
             sx={{
               width: { xs: "80%", sm: "60%", md: 400 },
