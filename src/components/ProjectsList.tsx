@@ -1,24 +1,26 @@
 import { Box } from "@mui/material";
 import ProjectCard from "./ProjectCard";
+
+type ProjectType = "img" | "video";
+
 export type Project = {
   name: string;
   description: string;
   url: string;
   technologies: string[];
-  images: string[];
+  assets: string[];
+  type: ProjectType;
 };
 
 const projects: Project[] = [
   {
-    name: "RevLearn",
+    name: "LearningModules",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate, quos alias, aut dicta recusandae rem commodi voluptas, repudiandae dolore quasi dolor voluptatibus quod voluptatum odio distinctio ipsum fuga veniam.",
-    url: "www.github.com",
-    technologies: ["src/assets/icon/reactIcon.svg"],
-    images: [
-      "src/assets/icons/jsIcon.svg",
-      "src/assets/icons/materialIcon.svg",
-    ],
+    url: "",
+    technologies: ["/assets/icon/reactIcon.svg"],
+    assets: ["/assets/videos/LearningModules.mp4"],
+    type: "video",
   },
 ];
 const ProjectsList = () => {

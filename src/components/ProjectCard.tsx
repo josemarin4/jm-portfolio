@@ -13,7 +13,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const ProjectCard = (project: Project) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const total: number = project.images.length;
+  const total: number = project.assets.length;
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -38,11 +38,23 @@ const ProjectCard = (project: Project) => {
         </Typography>
       </CardContent>
       <Box sx={{ position: "relative" }}>
-        <CardMedia
-          component="img"
-          image={project.images[currentIndex]}
-          alt={`Image ${currentIndex + 1}`}
-        />
+        {project.type === "video" ? (
+          <CardMedia
+            component="video"
+            src={project.assets[currentIndex]}
+            style={{ width: "100%", height: "auto" }}
+            controls
+            autoPlay
+            muted
+            playsInline
+          />
+        ) : (
+          <CardMedia
+            component="img"
+            image={project.assets[currentIndex]}
+            alt={`Image ${currentIndex + 1}`}
+          />
+        )}
         {total > 1 && (
           <IconButton
             onClick={handlePrev}
