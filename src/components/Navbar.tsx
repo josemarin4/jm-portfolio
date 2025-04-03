@@ -47,9 +47,36 @@ const Navbar = () => {
         }}
       >
         <Box
-          sx={{ color: "common.white", fontWeight: "bold", fontSize: "1.5rem" }}
+          component="a"
+          href="#Home"
+          sx={{ display: "flex", textDecoration: "none", cursor: "pointer" }}
         >
-          JM
+          <Box
+            component="img"
+            src="src/assets/icons/favIcon.png"
+            alt="JM Icon"
+            sx={{
+              marginRight: 1,
+              height: 50,
+              width: 50,
+              boxShadow: "0 0 4px rgba(0, 0, 0, 0.15)",
+              borderRadius: "50%",
+              "&:hover": {
+                transform: "scale(1.05)",
+                transition: "transform 0.2s ease-in-out",
+              },
+            }}
+          />
+          <Box
+            sx={{
+              color: "common.white",
+              fontWeight: "bold",
+              fontSize: "1rem",
+              marginTop: 1.5,
+            }}
+          >
+            Jose Marin
+          </Box>
         </Box>
 
         {isMobile ? (
