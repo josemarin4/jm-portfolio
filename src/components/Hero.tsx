@@ -20,6 +20,7 @@ const Hero: FC = () => {
     <Box
       id="Home"
       sx={{
+        scrollMarginTop: "64px", //makes sure of scrolling all the way to the top
         px: 2,
         mt: { xs: 12, md: -4 },
       }}
