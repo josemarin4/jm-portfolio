@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
 import HamburguerMenu from "./HamburguerMenu";
 import { useState, useEffect } from "react";
-
+import logoIcon from "../assets/icons/favIcon.png";
 const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -53,7 +53,7 @@ const Navbar = () => {
         >
           <Box
             component="img"
-            src="src/assets/icons/favIcon.png"
+            src={logoIcon}
             alt="JM Icon"
             sx={{
               marginRight: 1,
