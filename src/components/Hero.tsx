@@ -38,7 +38,7 @@ const Hero: FC = () => {
           sx={{
             flex: 1,
             textAlign: { xs: "center", md: "left" },
-            mt: { xs: 4, md: 0 },
+            mt: { xs: 9, md: 0 },
           }}
         >
           <Typography
@@ -99,33 +99,34 @@ const Hero: FC = () => {
               justifyContent: { xs: "center", md: "flex-start" },
               alignItems: "center",
               gap: 3,
-              mt: { xs: 9, md: 3 },
+              mt: { xs: 1, md: 3 },
               flexWrap: "nowrap",
             }}
           >
-            <a
+            <Box
+              component="a"
               href="/JoseMarinResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
+              sx={{ textDecoration: "none", mt: { xs: 2 } }}
             >
               <Button
                 variant="contained"
                 color="primary"
                 sx={{
                   fontWeight: "bold",
-                  fontSize: isSmallScreen ? "0.8rem" : "0.9rem",
-                  paddingX: isSmallScreen ? 2 : 2.5,
-                  paddingY: isSmallScreen ? 1 : 1.2,
+                  fontSize: isSmallScreen ? "0.5rem" : "0.9rem",
+                  paddingX: isSmallScreen ? 1 : 2.5,
+                  paddingY: isSmallScreen ? 0.5 : 1.2,
                   borderRadius: 2,
-                  minWidth: isSmallScreen ? 100 : 120,
+                  minWidth: isSmallScreen ? 70 : 120,
                   transition: "transform 0.2s ease-in-out",
                   "&:hover": { transform: "scale(1.07)" },
                 }}
               >
                 {isSmallScreen ? "Resume" : "My Resume"}
               </Button>
-            </a>
+            </Box>
             <Box
               sx={{
                 display: "flex",
@@ -133,7 +134,7 @@ const Hero: FC = () => {
                 transform: isSmallScreen ? "scale(0.8)" : "scale(1)",
               }}
             >
-              <SocialIcons />
+              <SocialIcons isSmallScreen={isSmallScreen} />
             </Box>
           </Box>
         </Box>
@@ -157,7 +158,7 @@ const Hero: FC = () => {
               sx={{
                 position: "absolute",
                 top: 0,
-                left: 0, // make sure it covers the entire image width
+                left: 0,
                 width: "100%",
                 height: "100%",
                 zIndex: -1,
