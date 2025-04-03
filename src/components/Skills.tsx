@@ -80,12 +80,12 @@ const Skills = () => {
         <Box sx={{ mb: { xs: 6, md: 10 } }}>
           <Typography
             variant="subtitle1"
+            component="h2"
             sx={{
               fontWeight: "bold",
-              fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" },
               mb: 5,
               ml: { xs: 0, md: 3 },
-              color: "black",
+              color: "primary.main",
             }}
           >
             Languages
@@ -103,16 +103,15 @@ const Skills = () => {
           </Grid>
         </Box>
 
-        {/* Technologies and Frameworks */}
-        <Box sx={{ mb: { xs: 2, md: 4 } }}>
+        <Box sx={{ mb: { xs: 6, md: 10 }, mt: { xs: 6, md: 8 } }}>
           <Typography
             variant="subtitle1"
+            component="h2"
             sx={{
               fontWeight: "bold",
-              fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" },
               mb: 5,
               ml: { xs: 0, md: 3 },
-              color: "black",
+              color: "primary.main",
             }}
           >
             Technologies and Frameworks
