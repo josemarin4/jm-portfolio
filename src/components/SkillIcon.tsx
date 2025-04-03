@@ -6,8 +6,8 @@ const SkillIcon = ({ src, alt, name }: Icon) => {
     <Tooltip title={name} arrow>
       <Box
         sx={{
-          width: 100,
-          height: 100,
+          width: { xs: 70, sm: 85, md: 100 },
+          height: { xs: 70, sm: 85, md: 100 },
           borderRadius: "50%",
           display: "flex",
           alignItems: "center",
@@ -31,8 +31,8 @@ const SkillIcon = ({ src, alt, name }: Icon) => {
           src={src}
           alt={alt}
           sx={{
-            maxWidth: "70%",
-            maxHeight: "70%",
+            maxWidth: "60%",
+            maxHeight: "60%",
           }}
         />
       </Box>

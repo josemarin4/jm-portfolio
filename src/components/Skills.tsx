@@ -43,20 +43,20 @@ const Skills = () => {
     { src: gitHubIcon, alt: "GitHub Icon", name: "GitHub" },
     { src: gitIcon, alt: "Git Icon", name: "Git" },
   ];
+
   return (
     <Box
       id="Skills"
       sx={{
-        justifyContent: "center",
+        scrollMarginTop: { xs: "80px", md: "100px" },
         mt: { xs: 10 },
         mb: 5,
-        px: 2,
       }}
     >
       <Box
         sx={{
           maxWidth: "75rem",
-          marginX: "auto",
+          mx: "auto",
           background: "#f9fafb",
           borderRadius: "20px",
           px: { xs: 3, md: 6 },
@@ -68,19 +68,21 @@ const Skills = () => {
           component="h2"
           sx={{
             fontWeight: "bold",
-            mb: 10,
+            mb: 8,
             color: "secondary.main",
             textAlign: { xs: "center", md: "left" },
           }}
         >
           Tech Stack
         </Typography>
+
+        {/* Languages */}
         <Box sx={{ mb: { xs: 6, md: 10 } }}>
           <Typography
             variant="subtitle1"
-            component="h2"
             sx={{
               fontWeight: "bold",
+              fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" },
               mb: 5,
               ml: { xs: 0, md: 3 },
               color: "black",
@@ -88,28 +90,26 @@ const Skills = () => {
           >
             Languages
           </Typography>
-          <Grid container spacing={3} justifyContent="center">
+          <Grid
+            container
+            spacing={{ xs: 2, sm: 3, md: 4 }}
+            justifyContent="center"
+          >
             {langIcons.map((lang) => (
-              <Grid
-                item
-                xs={6}
-                sm={4}
-                md={2}
-                key={lang.name}
-                display="flex"
-                justifyContent="center"
-              >
+              <Grid item xs="auto" key={lang.name}>
                 <SkillIcon {...lang} />
               </Grid>
             ))}
           </Grid>
         </Box>
+
+        {/* Technologies and Frameworks */}
         <Box sx={{ mb: { xs: 2, md: 4 } }}>
           <Typography
             variant="subtitle1"
-            component="h2"
             sx={{
               fontWeight: "bold",
+              fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" },
               mb: 5,
               ml: { xs: 0, md: 3 },
               color: "black",
@@ -117,17 +117,13 @@ const Skills = () => {
           >
             Technologies and Frameworks
           </Typography>
-          <Grid container spacing={3} justifyContent="center">
+          <Grid
+            container
+            spacing={{ xs: 2, sm: 3, md: 4 }}
+            justifyContent="center"
+          >
             {techIcons.map((tech) => (
-              <Grid
-                item
-                xs={6}
-                sm={4}
-                md={2}
-                key={tech.name}
-                display="flex"
-                justifyContent="center"
-              >
+              <Grid item xs="auto" key={tech.name}>
                 <SkillIcon {...tech} />
               </Grid>
             ))}
