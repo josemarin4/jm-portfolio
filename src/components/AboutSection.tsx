@@ -1,124 +1,104 @@
-import { Box, Typography, Button } from "@mui/material";
-import EmailIcon from "@mui/icons-material/Email";
+import { Box, Typography, Button, Grid, Stack } from "@mui/material";
+import { Email } from "@mui/icons-material";
 
-const AboutSection = () => {
+const AboutMe = () => {
   return (
     <Box
       id="About"
       sx={{
-        scrollMarginTop: "100px",
-        display: "flex",
-        justifyContent: "center",
-        mt: { xs: 10 },
-        mb: 5,
-        px: 2,
+        scrollMarginTop: { xs: "80px", md: "100px" },
+        backgroundColor: "#f9fafb",
+        borderRadius: "20px",
+        padding: { xs: 3, sm: 6 },
+        mt: 8,
+        maxWidth: "75rem",
+        mx: "auto",
       }}
     >
-      <Box
+      <Typography
+        variant="h4"
         sx={{
-          background: "#f9fafb",
-          borderRadius: "20px",
-          px: { xs: 3, md: 6 },
-          py: { xs: 5, md: 6 },
-          width: "100%",
+          color: "#f97316",
+          fontWeight: "bold",
+          mb: 5,
+          textAlign: { xm: "center", sm: "center", md: "left" },
         }}
       >
-        <Typography
-          variant="h4"
-          component="h2"
-          sx={{
-            fontWeight: "bold",
-            mb: 10,
-            color: "secondary.main",
-            textAlign: { xs: "center", md: "left" },
-          }}
-        >
-          About Me
-        </Typography>
+        About Me
+      </Typography>
 
-        <Typography
-          variant="body1"
-          sx={{
-            fontFamily: "Roboto, sans-serif",
-            color: "text.primary",
-            fontSize: { xs: "1rem", md: "1.05rem" },
-            lineHeight: 1.8,
-            textAlign: "justify",
-            // Make side margins responsive
-            marginLeft: { xs: 0, md: 5 },
-            marginRight: { xs: 0, md: 5 },
-          }}
-        >
-          Hello, I’m <strong>Jose</strong>, a Full Stack Developer with a solid
-          background in Java, Spring Boot, and modern web technologies.
-          <br />
-          <br />
-          I earned my Computer Science degree from the University of Puerto Rico
-          and have since been passionate about building applications that solve
-          real-world problems—from improving medication management to enhancing
-          online learning.
-          <br />
-          <br />
-          At Infosys, I’ve completed advanced training in Java, React, and
-          Google Cloud, and have built proof-of-concept apps that integrate REST
-          APIs and modern frontend frameworks. I’m constantly growing my skills
-          in full-stack development, AWS deployment, and scalable system design.
-          <br />
-          <br />
-          I’ve led the development of projects like{" "}
-          <Box
-            component="span"
-            sx={{ color: "secondary.main", fontWeight: 600 }}
-          >
-            MedTrack
-          </Box>
-          , focused on health improvement, and{" "}
-          <Box
-            component="span"
-            sx={{ color: "secondary.main", fontWeight: 600 }}
-          >
-            RevLearn
-          </Box>
-          , an educational platform. My work combines clean architecture, React
-          with MUI, and robust backend logic.
-          <br />
-          <br />
-          In my free time, I enjoy exploring and learning new technologies like
-          Docker and Kafka, and bringing ideas to life through code.
-        </Typography>
+      <Grid container spacing={4} justifyContent="center" mt={2}>
+        <Grid item xs={12} md={10}>
+          <Stack spacing={3} textAlign="left">
+            <Typography>
+              Hi, I’m a Full Stack Developer with a strong foundation in{" "}
+              <strong>Java</strong>, <strong>Spring Boot</strong>, and modern
+              frontend technologies like React. I’m passionate about building
+              applications that are both visually polished and functionally
+              robust.
+            </Typography>
 
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: { xs: "center", md: "flex-start" },
-            mt: 4,
-          }}
-        >
-          <Button
-            variant="contained"
-            startIcon={<EmailIcon />}
-            href="mailto:josemarin@example.com"
-            sx={{
-              fontWeight: "bold",
-              px: 3,
-              py: 1.5,
-              borderRadius: 2,
-              fontSize: "0.95rem",
-              marginLeft: { xs: 0, md: 5 },
-              textTransform: "none",
-              transition: "all 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.05)",
-                backgroundColor: "primary.dark",
-              },
-            }}
-          >
-            Contact Me
-          </Button>
-        </Box>
-      </Box>
+            <Typography>
+              After earning my Computer Science degree from the University of
+              Puerto Rico, I’ve been focused on building meaningful digital
+              experiences—ranging from tools that help manage medication
+              schedules to platforms that enhance online education.
+            </Typography>
+
+            <Typography>
+              At Infosys, I completed advanced training in{" "}
+              <strong>Java, React, and Google Cloud</strong>, and contributed to
+              projects that integrated <strong>REST APIs</strong>,{" "}
+              <strong>cloud infrastructure</strong>, and responsive UI
+              components built with modern frontend frameworks.
+            </Typography>
+
+            <Typography>
+              Some projects I’ve led include:
+              <ul style={{ listStylePosition: "inside", paddingLeft: 0 }}>
+                <li>
+                  <strong>MedTrack</strong> – a health-focused app designed to
+                  assist with medication tracking and improvement.
+                </li>
+                <li>
+                  <strong>RevLearn</strong> – an educational platform built to
+                  support remote learning and resource sharing.
+                </li>
+              </ul>
+              My approach combines clean architecture, thoughtful user
+              experiences, and robust backend logic to deliver complete
+              solutions.
+            </Typography>
+
+            <Typography>
+              Outside of work, I enjoy exploring new technologies like{" "}
+              <strong>Docker</strong> and <strong>Kafka</strong>, constantly
+              leveling up my skills and finding new ways to bring ideas to life
+              through code.
+            </Typography>
+
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                mt: 3,
+              }}
+            >
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<Email />}
+                sx={{ width: "fit-content" }}
+                href="#Contact"
+              >
+                Contact Me
+              </Button>
+            </Box>
+          </Stack>
+        </Grid>
+      </Grid>
     </Box>
   );
 };
 
-export default AboutSection;
+export default AboutMe;
