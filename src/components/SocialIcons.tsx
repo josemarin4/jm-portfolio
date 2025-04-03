@@ -17,15 +17,19 @@ const socialLinks = [
   },
 ];
 
-const SocialIcons = () => {
+type Props = {
+  isSmallScreen: boolean;
+};
+
+const SocialIcons = ({ isSmallScreen }: Props) => {
   return (
     <Box sx={{ display: "flex", gap: 3.5, mt: 2 }}>
       {socialLinks.map(({ href, icon, alt }) => (
         <a href={href} target="_blank" rel="noopener noreferrer" key={alt}>
           <Box
             sx={{
-              width: 56,
-              height: 56,
+              width: isSmallScreen ? 45 : 56,
+              height: isSmallScreen ? 45 : 56,
               borderRadius: "50%",
               display: "flex",
               alignItems: "center",
