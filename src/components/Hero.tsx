@@ -105,7 +105,7 @@ const Hero: FC = () => {
           >
             <Box
               component="a"
-              href="/JoseMarinResume.pdf"
+              href="/assets/files/JoseMarinResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               sx={{ textDecoration: "none", mt: { xs: 2 } }}
