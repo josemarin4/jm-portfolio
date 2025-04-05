@@ -8,7 +8,7 @@ const socialLinks = [
   },
   {
     href: "https://www.linkedin.com/in/josem-marin/",
-    icon: "../assets/icons/linkedin.svg",
+    icon: "/assets/icons/linkedin.svg",
     alt: "LinkedIn",
   },
   {
