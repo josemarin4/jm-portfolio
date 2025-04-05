@@ -1,54 +1,38 @@
-# React + TypeScript + Vite
+# 🧑‍💻 JMPortfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**JMPortfolio** is a responsive, single-page portfolio website built using **React**, **TypeScript**, and **Material-UI**. It showcases my software engineering projects, tech stack, and professional background in a clean and modern UI. The site includes interactive animations, embedded media, and custom styling for an engaging user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✨ Modern responsive design with Material-UI
+- 🎥 Video and image carousels for project demos
+- 🧠 Interactive Tech Stack visualization
+- 📱 Mobile-first layout and accessibility optimized
+- 🌐 Deployed via Cloudflare Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Frontend     | UI Components  | Deployment        |
+| ------------ | -------------- | ----------------- |
+| React + Vite | Material-UI    | Cloudflare Pages  |
+| TypeScript   | tsParticles    |                   |
+| HTML5 / CSS3 |                |                   |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🧪 Local Development
+
+```bash
+# Clone this repo (private)
+git clone https://github.com/your-username/jm-portfolio.git
+cd jm-portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
