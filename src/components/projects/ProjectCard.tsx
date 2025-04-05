@@ -1,4 +1,4 @@
-import { Project } from "./ProjectsList";
+import { Project } from "./ProjectsSection";
 import {
   Card,
   CardContent,

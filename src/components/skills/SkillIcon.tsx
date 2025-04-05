@@ -1,5 +1,5 @@
 import { Box, Tooltip } from "@mui/material";
-import { Icon } from "./Skills";
+import { Icon } from "./SkillsSection.tsx";
 
 const SkillIcon = ({ src, alt, name }: Icon) => {
   return (

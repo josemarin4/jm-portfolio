@@ -3,13 +3,13 @@ import { createRoot } from "react-dom/client";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { GlobalStyles } from "@mui/material";
 import theme from "./theme/theme";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Navbar from "./components/common/Navbar";
+import HeroSection from "./components/hero/HeroSection";
 import { Box } from "@mui/material";
-import ParticleBackground from "./components/ParticleBackground";
-import AboutSection from "./components/AboutSection";
-import Skills from "./components/Skills";
-import ProjectsList from "./components/ProjectsList";
+import ParticleBackground from "./components/hero/ParticleBackground";
+import AboutSection from "./components/about/AboutSection";
+import SkillsSection from "./components/skills/SkillsSection";
+import ProjectsSection from "./components/projects/ProjectsSection";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
@@ -40,11 +40,11 @@ createRoot(document.getElementById("root")!).render(
           mt: 7,
         }}
       >
-        <Hero />
+        <HeroSection />
         <ParticleBackground />
         <AboutSection />
-        <Skills />
-        <ProjectsList />
+        <SkillsSection />
+        <ProjectsSection />
       </Box>
     </ThemeProvider>
   </StrictMode>
