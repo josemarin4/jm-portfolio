@@ -89,7 +89,7 @@ const AboutMe = () => {
                 color="primary"
                 startIcon={<Email />}
                 sx={{ width: "fit-content" }}
-                href="#Contact"
+                href="mailto:josem.marinhernandez@gmail.com"
               >
                 Contact Me
               </Button>
